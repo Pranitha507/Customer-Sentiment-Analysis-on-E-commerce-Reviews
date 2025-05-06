@@ -6,9 +6,9 @@ def prepare_data(input_file, output_file):
     data = pd.read_csv(input_file)
 
     # Cleaning the dataset
-    data = data.dropna(subset=['reviews.text', 'reviews.title'])  # Remove rows with missing reviews
-    data['reviews.date'] = pd.to_datetime(data['reviews.date'], errors='coerce')  # Convert date to datetime
-    data['reviews.text'] = data['reviews.text'].str.lower()  # Convert text to lowercase
+    data = data.dropna(subset=['reviews.text', 'reviews.title'])  
+    data['reviews.date'] = pd.to_datetime(data['reviews.date'], errors='coerce')  
+    data['reviews.text'] = data['reviews.text'].str.lower() 
     data['reviews.title'] = data['reviews.title'].str.lower()
 
     # Saving cleaned data
