@@ -41,7 +41,7 @@ def perform_eda(input_file, negative_reviews_file, output_file):
     word_freq = pd.Series(negative_tokens).value_counts().head(10)
 
     # Visualizing top words in negative reviews
-    plt.figure(figsize=(10, 6))
+     plt.figure(figsize=(10, 6))
     sns.barplot(x=word_freq.values, y=word_freq.index)
     plt.title('Top 10 Words in Negative Reviews')
     plt.xlabel('Frequency')
